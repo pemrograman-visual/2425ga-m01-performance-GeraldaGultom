@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="M01"/>
+        <attribute name="authors" value="Henry Kevin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-18 10:27:44 AM"/>
+        <attribute name="created" value="SGVucnkgS2V2aW47TEFQVE9QLURNMERHUzBLOzIwMjQtMTAtMTg7MDk6NTU6MTcgQU07MzM4MA=="/>
+        <attribute name="edited" value="SGVucnkgS2V2aW47TEFQVE9QLURNMERHUzBLOzIwMjQtMTAtMTg7MTA6Mjc6NDQgQU07MTszNDc5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Performa, Nilai, A, AB, B, BC, C, D, E, Kreditnya" type="Real" array="False" size=""/>
+            <declare name="Kredit, Nilainya" type="String" array="False" size=""/>
+            <assign variable="Kreditnya" expression="0"/>
+            <assign variable="A" expression="4.0"/>
+            <assign variable="AB" expression="3.5"/>
+            <assign variable="B" expression="3.0"/>
+            <assign variable="BC" expression="3.0"/>
+            <assign variable="C" expression="2.0"/>
+            <assign variable="D" expression="1.0"/>
+            <assign variable="E" expression="0.0"/>
+            <input variable="Kredit"/>
+            <if expression="Kredit=&quot;---&quot;">
+                <then>
+                    <assign variable="Kredit" expression="Kredit"/>
+                </then>
+                <else>
+                    <assign variable="Kreditnya" expression="toReal(Kredit)"/>
+                </else>
+            </if>
+            <input variable="Nilainya"/>
+            <while expression="Nilainya !=&quot;---&quot;">
+                <if expression="Nilainya = &quot;A&quot;">
+                    <then>
+                        <assign variable="Nilai" expression="4.0"/>
+                    </then>
+                    <else>
+                        <if expression="Nilainya = &quot;AB&quot;">
+                            <then>
+                                <assign variable="Nilai" expression="3.5"/>
+                            </then>
+                            <else>
+                                <if expression="Nilainya = &quot;B&quot;">
+                                    <then>
+                                        <assign variable="Nilai" expression="3.0"/>
+                                    </then>
+                                    <else>
+                                        <if expression="Nilainya = &quot;BC&quot;">
+                                            <then>
+                                                <assign variable="Nilai" expression="2.5"/>
+                                            </then>
+                                            <else>
+                                                <if expression="Nilainya = &quot;C&quot;">
+                                                    <then>
+                                                        <assign variable="Nilai" expression="2.0"/>
+                                                    </then>
+                                                    <else>
+                                                        <if expression="Nilainya = &quot;D&quot;">
+                                                            <then>
+                                                                <assign variable="Nilai" expression="1.0"/>
+                                                            </then>
+                                                            <else>
+                                                                <if expression="Nilainya = &quot;E&quot;">
+                                                                    <then>
+                                                                        <assign variable="Nilai" expression="0.0"/>
+                                                                    </then>
+                                                                    <else>
+                                                                        <assign variable="Nilai" expression="0.0"/>
+                                                                    </else>
+                                                                </if>
+                                                            </else>
+                                                        </if>
+                                                    </else>
+                                                </if>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+                <assign variable="Performa" expression="(Kreditnya*Nilai)"/>
+                <output expression="ToFixed(Performa,1)" newline="True"/>
+                <input variable="Kredit"/>
+                <if expression="Kredit = &quot;---&quot;">
+                    <then>
+                        <assign variable="Kredit" expression="Kredit"/>
+                    </then>
+                    <else>
+                        <assign variable="Kreditnya" expression="toReal(Kredit)"/>
+                    </else>
+                </if>
+                <input variable="Nilainya"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
